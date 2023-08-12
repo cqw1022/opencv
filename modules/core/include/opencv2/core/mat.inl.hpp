@@ -292,6 +292,9 @@ inline _OutputArray::_OutputArray(const UMat& m)
 inline _OutputArray::_OutputArray(const std::vector<UMat>& vec)
 { init(FIXED_SIZE + STD_VECTOR_UMAT + ACCESS_WRITE, &vec); }
 
+inline _OutputArray::_OutputArray(const std::vector<cuda::GpuMat>& vec)
+{init(FIXED_SIZE + STD_VECTOR_CUDA_GPU_MAT + ACCESS_WRITE, &vec);}
+
 inline _OutputArray::_OutputArray(const cuda::GpuMat& d_mat)
 { init(FIXED_TYPE + FIXED_SIZE + CUDA_GPU_MAT + ACCESS_WRITE, &d_mat); }
 

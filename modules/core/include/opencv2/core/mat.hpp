@@ -3274,9 +3274,9 @@ public:
     const SparseMat::Node* node() const;
 
     //! moves iterator to the previous element
-    SparseMatConstIterator& operator --();
+    // SparseMatConstIterator& operator --();
     //! moves iterator to the previous element
-    SparseMatConstIterator operator --(int);
+    // SparseMatConstIterator operator --(int);
     //! moves iterator to the next element
     SparseMatConstIterator& operator ++();
     //! moves iterator to the next element

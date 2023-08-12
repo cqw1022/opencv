@@ -1613,14 +1613,14 @@ static void checkOpenCLVersion()
     CV_Assert(status == CL_SUCCESS && sz == sizeof(cl_platform_id));
     CV_Assert(platform_id);
 
-    PlatformInfo pi(&platform_id);
-    int versionMajor = pi.versionMajor();
-    int versionMinor = pi.versionMinor();
-    if (versionMajor < 1 || (versionMajor == 1 && versionMinor <= 1))
-        CV_Error_(cv::Error::OpenCLApiCallError,
-            ("OpenCL: clCreateFromGLTexture requires OpenCL 1.2+ version: %d.%d - %s (%s)",
-                versionMajor, versionMinor, pi.name().c_str(), pi.version().c_str())
-        );
+    // PlatformInfo pi(&platform_id);
+    // int versionMajor = pi.versionMajor();
+    // int versionMinor = pi.versionMinor();
+    // if (versionMajor < 1 || (versionMajor == 1 && versionMinor <= 1))
+    //     CV_Error_(cv::Error::OpenCLApiCallError,
+    //         ("OpenCL: clCreateFromGLTexture requires OpenCL 1.2+ version: %d.%d - %s (%s)",
+    //             versionMajor, versionMinor, pi.name().c_str(), pi.version().c_str())
+    //     );
 }
 #endif
 

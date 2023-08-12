@@ -523,7 +523,7 @@ public:
      * @param sync specify whether to wait for OpenCL computation to finish before return.
      * @param q command queue
      */
-    bool run_(int dims, size_t globalsize[], size_t localsize[], bool sync, const Queue& q=Queue());
+    // bool run_(int dims, size_t globalsize[], size_t localsize[], bool sync, const Queue& q=Queue());
 
     bool runTask(bool sync, const Queue& q=Queue());
 
@@ -685,8 +685,8 @@ public:
 
     /// See CL_PLATFORM_VERSION
     String version() const;
-    int versionMajor() const;
-    int versionMinor() const;
+    // int versionMajor() const;
+    // int versionMinor() const;
 
     int deviceNumber() const;
     void getDevice(Device& device, int d) const;
@@ -698,7 +698,7 @@ protected:
 };
 
 CV_EXPORTS CV_DEPRECATED const char* convertTypeStr(int sdepth, int ddepth, int cn, char* buf);
-CV_EXPORTS const char* convertTypeStr(int sdepth, int ddepth, int cn, char* buf, size_t buf_size);
+// CV_EXPORTS const char* convertTypeStr(int sdepth, int ddepth, int cn, char* buf, size_t buf_size);
 CV_EXPORTS const char* typeToStr(int t);
 CV_EXPORTS const char* memopTypeToStr(int t);
 CV_EXPORTS const char* vecopTypeToStr(int t);
